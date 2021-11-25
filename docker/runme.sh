@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run --rm -p 9001:9001 --name minio  -e "MINIO_ACCESS_KEY=minio"  -e "MINIO_SECRET_KEY=minio123" -v /mnt/d/note/minio/data:/data quay.io/minio/minio:RELEASE.2021-11-09T03-21-45Z server --console-address :9001 /data
